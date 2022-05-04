@@ -1,0 +1,36 @@
+.card {
+  margin-top: 1rem;
+}
+
+.card__image-container {
+  margin-bottom: 10px;
+}
+
+.card__image {
+  width: auto;
+  width: 100%;
+  height: auto;
+}
+
+.card__title {
+  font-size: 20px;
+}
+
+.card__horizontal-line {
+  width: 30px;
+}
+
+.card__text-container {
+  padding-left: 1rem;
+}
+
+.card__listOfItems {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width:768px) {
+  .card__image-container {
+    margin-bottom: 0px;
+  }
+}
