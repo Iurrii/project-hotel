@@ -1,0 +1,48 @@
+.card-rules {
+  padding: 40px 0px;
+  border: none;
+  border-radius: 0%;
+  border-top: 1px solid rgba(108, 117, 125, 0.25);
+}
+
+.card-rules__header {
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+
+.card-rules__title {
+  font-weight: 600;
+}
+
+.card-rules__subtitle {
+  font-weight: 600;
+}
+
+.card-rules__rule {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: auto;
+  min-height: 20px;
+  margin-bottom: 12px;
+}
+
+.card-rules__rule>* {
+  margin: 0;
+  line-height: 100%;
+}
+
+/* .card-rules__col>:last-child {
+  margin-top: 30px;
+} */
+
+.card-rules__rule-link {
+  font-weight: 600;
+  color: #000;
+}
+
+.card-rules__rule-icon {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 10px;
+}

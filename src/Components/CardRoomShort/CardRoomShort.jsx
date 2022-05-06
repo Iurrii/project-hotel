@@ -1,8 +1,8 @@
 import { Card, CardBody, CardTitle, CardSubtitle, Col } from "reactstrap";
-import "./CardRoomOfHotel.css";
+import "./CardRoomShort.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export function CardRoomOfHotel({ props }) {
+export function CardRoomShort({ props }) {
   return (
     <Card className="card">
       <CardBody className="row">
@@ -20,7 +20,7 @@ export function CardRoomOfHotel({ props }) {
           xl={{ size: 6, offset: 0 }}
         >
           <CardSubtitle className="text-muted">
-            {props.type}piso en {props.location}
+            {props.type}piso&nbsp;en&nbsp;{props.location}
           </CardSubtitle>
 
           <CardTitle className="card__title">{props.name}</CardTitle>
