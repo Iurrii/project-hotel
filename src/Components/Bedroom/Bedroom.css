@@ -1,0 +1,13 @@
+.bedroom {
+  min-height: 160px;
+  padding: 10% 10%;
+  border-radius: 10%;
+}
+
+.bedroom>*:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.bedroom__title {
+  font-weight: 600;
+}

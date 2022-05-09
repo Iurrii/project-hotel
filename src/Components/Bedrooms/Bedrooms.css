@@ -1,0 +1,13 @@
+.bedrooms {
+  border: none;
+  box-sizing: border-box;
+  border-radius: 0%;
+  border-top: 1px solid rgba(108, 117, 125, 0.25);
+  padding: 30px 0px 0px 0px;
+}
+
+.bedrooms__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}

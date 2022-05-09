@@ -4,6 +4,7 @@ import {CardRoomDescription} from "./Components/CardRoomDescription/CardRoomDesc
 import {CardRoomRules} from "./Components/CardRoomRules/CardRoomRules.jsx";
 import { Container, Col } from "reactstrap";
 import { CardRoomDetailed } from "./Components/CardRoomDetailed/CardRoomDetailed";
+import { Bedrooms } from "./Components/Bedrooms/Bedrooms.jsx";
 
 
 function App() {
@@ -51,21 +52,26 @@ function App() {
   };
 
 
-  const dataRoomDetailed = {
-    kitchen: true,
-    pool: true,
-    tv: true,
-    airConditioning: true,
-    detectorCO2: true,
-    detectorSmoke: true,
-    wifi: true,
-    admiteMascotas: true,
-    bath: true,
-    washingMachine: true,
+  const dataRoomDetailed = [
+    { name: 'Kitchen', isRender: true, icon: 'icon_name' },
+    { name: 'Pool', isRender: true, icon: 'icon_name' },
+    { name: 'TV', isRender: true, icon: 'icon_name' },
+    { name: 'Air conditioner', isRender: true, icon: 'icon_name' },
+    { name: 'Detector CO2', isRender: true, icon: 'icon_name' },
+    { name: 'WIFi', isRender: false, icon: 'icon_name' },
+    { name: 'Pets allowed', isRender: true, icon: 'icon_name' },
+    { name: 'Washer', isRender: true, icon: 'icon_name' },
+    { name: 'Bath', isRender: true, icon: 'icon_name' },
+    { name: 'Smoke detector', isRender: false, icon: 'icon_name' },
     
+    
+  ];
 
-
-}
+  const dataBedrooms = [
+    { roomName: "Bedroom 1", doubleBed: 1 },
+    { roomName: "Bedroom 2", singleBed: 2},
+    { roomName: "Hall", sofa: 1 },
+  ];
 
   return (
     <>
@@ -79,6 +85,7 @@ function App() {
           {/* <CardRoomDescription props={dataOfRoom} /> */}
         </Col>
         {/* <CardRoomRules props={dataOfRoom} /> */}
+        <Bedrooms props={dataBedrooms} />
         <CardRoomDetailed props={dataRoomDetailed} />
       </Container>
     </>

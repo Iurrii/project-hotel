@@ -1,0 +1,24 @@
+.card-detailed {
+  border: none;
+  box-sizing: border-box;
+  border-radius: 0%;
+  border-top: 1px solid rgba(108, 117, 125, 0.25);
+  padding: 40px 0px 0px 0px;
+}
+
+.card-detailed__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.card-detailed__items {}
+
+.card-detailed__item {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-detailed__item>:not(:last-child) {
+  margin-right: 15px;
+}
