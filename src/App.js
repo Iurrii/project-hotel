@@ -1,16 +1,17 @@
 import "./App.css";
+
 import { CardRoomShort } from "./Components/CardRoomShort/CardRoomShort.jsx";
 import {CardRoomDescription} from "./Components/CardRoomDescription/CardRoomDescription.jsx"
 import {CardRoomRules} from "./Components/CardRoomRules/CardRoomRules.jsx";
 import { Container, Col } from "reactstrap";
 import { CardRoomDetailed } from "./Components/CardRoomDetailed/CardRoomDetailed";
 import { Bedrooms } from "./Components/Bedrooms/Bedrooms.jsx";
-
+import {PhotoGallery} from "./Components/PhotoGallery/PhotoGallery.jsx"
 
 function App() {
   let dataOfRoom = {
     type: "Alojamiento entero",
-    location: "Oporesa dal Mar",
+    location: "Oporesa del Mar",
     name: "El Cano-Marino d'Or for 4 personas",
     maxGuests: "4 viajeros",
     numberOfBedrooms: "2 dormitorios",
@@ -73,6 +74,17 @@ function App() {
     { roomName: "Hall", sofa: 1 },
   ];
 
+  const dataPhotoGallery = {
+    name: "El Cano-Marino d'Or for 4 personas",
+    location: { name: "Oporesa del Mar", link: 'https://ya.ru' },
+    estimation: { value: 1, link: "https://ya.ru" },
+    images: [
+      "https://pro-dachnikov.com/uploads/posts/2021-10/1634567136_47-p-krasivii-bassein-foto-47.jpg",
+      "https://phonoteka.org/uploads/posts/2021-05/1620195520_23-phonoteka_org-p-krasnii-fon-bez-risunka-25.jpg",
+      "https://get.wallhere.com/photo/1920x1200-px-digital-lighting-hill-house-valley-1227522.jpg",
+    ],
+  };
+
   return (
     <>
       <Container>
@@ -85,8 +97,9 @@ function App() {
           {/* <CardRoomDescription props={dataOfRoom} /> */}
         </Col>
         {/* <CardRoomRules props={dataOfRoom} /> */}
-        <Bedrooms props={dataBedrooms} />
-        <CardRoomDetailed props={dataRoomDetailed} />
+        {/* <Bedrooms props={dataBedrooms} /> */}
+        {/* <CardRoomDetailed props={dataRoomDetailed} /> */}
+        <PhotoGallery props={dataPhotoGallery} />
       </Container>
     </>
   );
