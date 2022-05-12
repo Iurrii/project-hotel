@@ -1,7 +1,7 @@
 .bedroom {
   min-height: 160px;
   padding: 10% 10%;
-  border-radius: 10%;
+  border-radius: 10px;
 }
 
 .bedroom>*:not(:last-child) {

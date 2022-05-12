@@ -1,26 +1,30 @@
 import "./Bedroom.css"
 
-import { Col, Row, Card, CardTitle, CardSubtitle } from "reactstrap";
+import { Col, Card, CardTitle, CardSubtitle } from "reactstrap";
 import { MdBedroomChild, MdBedroomParent, MdChair } from "react-icons/md";
 
 export function Bedroom({ props }) {
 
   function getIconToPage(value, icon) {
     let content = [];
-      for (let i = 0; i < value; i++) {
-        content.push(<span key={i}>{icon}</span>);
+    for (let i = 0; i < value; i++) {
+      content.push(<span key={i}>{icon}</span>);
     }
     return content;
   }
 
+  function checkPropsForZeroValues(obj) {
+    return (Object.values(obj)).includes(0)
+  }
+
   return (
+    (!checkPropsForZeroValues(props)) &&
     <Col
       lg={{ size: 3, offset: 0 }}
       md={{ size: 4, offset: 0 }}
       sm={{ size: 12, offset: 0 }}
     >
       <Card className="bedroom">
-
         <div className="bedroom__icons">
           {props.doubleBed &&
             getIconToPage(props.doubleBed, <MdBedroomParent size={30} />)}

@@ -1,5 +1,7 @@
 import "./Bedrooms.css";
-import { Col, Row, Card, CardTitle } from "reactstrap";
+
+import { Row, Card, CardTitle } from "reactstrap";
+
 import { Bedroom } from "../Bedroom/Bedroom.jsx";
 
 export function Bedrooms({ props }) {

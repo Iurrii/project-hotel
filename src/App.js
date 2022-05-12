@@ -1,9 +1,10 @@
 import "./App.css";
 
+import { Container, Col } from "reactstrap";
+
 import { CardRoomShort } from "./Components/CardRoomShort/CardRoomShort.jsx";
 import {CardRoomDescription} from "./Components/CardRoomDescription/CardRoomDescription.jsx"
 import {CardRoomRules} from "./Components/CardRoomRules/CardRoomRules.jsx";
-import { Container, Col } from "reactstrap";
 import { CardRoomDetailed } from "./Components/CardRoomDetailed/CardRoomDetailed";
 import { Bedrooms } from "./Components/Bedrooms/Bedrooms.jsx";
 import {PhotoGallery} from "./Components/PhotoGallery/PhotoGallery.jsx"
@@ -17,7 +18,11 @@ function App() {
     numberOfBedrooms: "2 dormitorios",
     numberOfBeds: "4 camas",
     numberOfwc: "2 baños",
-    img: "https://avatars.mds.yandex.net/i?id=42ac327b0e361695011c685422e14d14-5876729-images-thumbs&n=13&exp=1",
+    images: [
+      "https://pro-dachnikov.com/uploads/posts/2021-10/1634567136_47-p-krasivii-bassein-foto-47.jpg",
+      "https://phonoteka.org/uploads/posts/2021-05/1620195520_23-phonoteka_org-p-krasnii-fon-bez-risunka-25.jpg",
+      "https://get.wallhere.com/photo/1920x1200-px-digital-lighting-hill-house-valley-1227522.jpg",
+    ],
     advantagesOfRoom: {
       title: "Piscina",
       subtitle: "Los huéspedes suelen buscar este servicio tan popular",
@@ -39,7 +44,7 @@ function App() {
     admits: {
       smoke: "Prohibido fumar",
       parties: "No se admiten fiestas o eventos",
-      mascotas: "Admite mascotas"
+      mascotas: "Admite mascotas",
     },
     cleaningInfo:
       "Se aplican las pautas de Airbnb con respecto al distanciamiento \
@@ -69,8 +74,8 @@ function App() {
   ];
 
   const dataBedrooms = [
-    { roomName: "Bedroom 1", doubleBed: 1 },
-    { roomName: "Bedroom 2", singleBed: 2},
+    { roomName: "Bedroom 1", doubleBed: 1},
+    { roomName: "Bedroom 2", singleBed: 2 },
     { roomName: "Hall", sofa: 1 },
   ];
 
@@ -93,13 +98,13 @@ function App() {
           md={{ size: 10, offset: 1 }}
           sm={{ size: 12, offset: 0 }}
         >
-          {/* <CardRoomShort props={dataOfRoom} /> */}
-          {/* <CardRoomDescription props={dataOfRoom} /> */}
+          {/* <CardRoomShort props={dataOfRoom} />
+          <CardRoomDescription props={dataOfRoom} /> */}
         </Col>
-        {/* <CardRoomRules props={dataOfRoom} /> */}
-        {/* <Bedrooms props={dataBedrooms} /> */}
-        {/* <CardRoomDetailed props={dataRoomDetailed} /> */}
-        <PhotoGallery props={dataPhotoGallery} />
+        {/* <PhotoGallery props={dataPhotoGallery} /> */}
+        <Bedrooms props={dataBedrooms} />
+        {/* <CardRoomDetailed props={dataRoomDetailed} />
+        <CardRoomRules props={dataOfRoom} /> */}
       </Container>
     </>
   );

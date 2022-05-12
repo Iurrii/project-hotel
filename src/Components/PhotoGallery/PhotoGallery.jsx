@@ -1,11 +1,9 @@
 import { Card, CardTitle, CardSubtitle, Row, Col } from "reactstrap";
 import "./PhotoGallery.css";
-
+// Default theme
 import "@splidejs/react-splide/css";
 
-import "@splidejs/react-splide/css/skyblue";
-import "@splidejs/react-splide/css/sea-green";
-
+// or only core styles
 import "@splidejs/react-splide/css/core";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
@@ -13,7 +11,7 @@ export function PhotoGallery({ props }) {
   return (
     <Card className="photo-gallery">
       <CardTitle className="photo-gallery__title">{props.name}</CardTitle>
-      <CardSubtitle className="text-muted">
+      <CardSubtitle className="photo-gallery__subtitle text-muted">
         <a className="text-muted" href={props.estimation.link}>
           {props.estimation.value}&nbsp;estimation
         </a>
@@ -30,7 +28,7 @@ export function PhotoGallery({ props }) {
           sm={{ size: 12, offset: 0 }}
         >
           <Splide
-            aria-label="My Favorite Images"
+            aria-label="Gallery"
             options={{
               rewind: true,
             }}
